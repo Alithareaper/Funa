@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Projects - Funa Style Concepts</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .image-grid img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav__links">
+      <li class="link"><a href="index.html#about-us" style="color: black;">ABOUT US</a></li>
+      <li class="link"><a href="projects.html" style="color: black;">PROJECTS</a></li>
+      <li class="nav__logo">
+        <a href="index.html"><img src="assets/funa.png" alt="logo"/></a>
+      </li>
+      <li class="link"><a href="services.html" class="button" style="color: black;">SERVICES</a></li>
+      <li class="link"><a href="#contact" style="color: black;">CONTACT</a></li>
+    </ul>
+  </nav>
+  <header class="header">
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h1>Our Projects</h1>
+      </div>
+    </div>
+  </header>
+  <section class="section__container projects__container">
+    <div class="projects__content">
+      <h2>Bedrooms</h2>
+      <p>Here you can showcase the various projects that Funa Style Concepts has completed.</p>
+      <div class="image-grid">
+        <img src="assets/BD1.jpg" alt="Bedroom 1" />
+        <img src="assets/BD2.jpg" alt="Bedroom 2" />
+        <img src="assets/BD3.jpg" alt="Bedroom 3" />
+        <img src="assets/BD5.jpg" alt="Bedroom 5" />
+        <img src="assets/BD6.jpg" alt="Bedroom 6" />
+        <img src="assets/BD7.jpg" alt="Bedroom 7" />
+        <img src="assets/BD8.jpg" alt="Bedroom 8" class="small-image">
+
+
+
+      </div>       
+    </div>
+  </section>
+  <footer class="footer">
+    <section id="contact">
+      <center><h3>Contact Us</h3></center>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a style="color: black;" href="mailto:funastyleconcepts@gmail.com">funastyleconcepts@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container"></div>
+      </div>
+      <div class="footer__bar">
+        <p>Copyright © 2024 Funa Style Concepts. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>

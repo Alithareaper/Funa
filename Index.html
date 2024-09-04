@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+G9lB1+0z4l7L1LmCDJ8E0Xb+W0OhQFV3HHNlqD" crossorigin="anonymous">
+  <title>Funa Style Concepts</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li class="link"><a href="#" onclick="scrollToSection('about-us')">ABOUT US</a></li>
+      <li class="link"><a href="projects.html">PROJECTS</a></li>
+      <li class="nav__logo">
+        <a href="index.html"><img src="assets/funa.png" alt="logo"/></a>
+      </li>
+      <li class="link"><a href="services.html" class="button">SERVICES</a></li>
+      <li class="link"><a href="#" onclick="scrollToSection('contact')" class="button">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="section__container header__container">
+      <div class="header__content">
+        <h4>Vhutshilo vho lula</h4>
+        <h1>
+          It will feel more like
+          <span><b><i><big>Home</big></i></span>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="section__container about__container">
+    <div class="about__content">
+      <h4>About Us</h4>
+      <p>
+        Funa Style Concepts offers a comprehensive range of services focused on
+        interior design and styling, with a keen emphasis on customization and
+        personalization to suit each client’s unique preferences and lifestyle.
+      </p>
+      <center>
+        <h4>
+          From furniture re-upholstering to custom-made furnishings and sourcing
+          of accessories, we aim to enhance and transform living spaces while
+          reflecting individual tastes and preferences.
+        </h4>
+      </center>
+      <p>
+        Our attention to detail and commitment to leaving spaces better than we
+        find them is evident in their approach to lifestyle curation and interior
+        design.
+      </p>
+    </div>
+    <div class="about__image">
+      <img src="assets/Lerato.jpg" alt="about" />
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="section__container banner__container">
+      <h4>Mobile Interior Designer</h4>
+      <p>Based in Johannesburg</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <br><br><br><center><h4>Gallery</h4></center>
+  <section class="section__container display__container">
+    <div class="display__col">
+      <img src="assets/display-1.jpg" alt="display" />
+      <div class="display__content">
+        <img src="assets/display-5.jpg" alt="display" />
+      </div>
+      <img src="assets/display-2.jpg" alt="display" />
+    </div>
+    <div class="display__col">
+      <div class="display__content">
+        <img src="assets/display-6.jpg" alt="display" />
+      </div>
+      <img src="assets/display-3.jpg" alt="display" />
+      <div class="display__content">
+        <img src="assets/display-7.jpg" alt="display" />
+      </div>
+    </div>
+    <div class="display__col">
+      <img src="assets/display-4.jpg" alt="display" />
+      <div class="display__content">
+        <img src="assets/display-8.jpg" alt="display" />
+      </div>
+      <img src="assets/display-5.jpg" alt="display" />
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <section id="contact">
+      <center><h3>Contact Us</h3></center>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:funastyleconcepts@gmail.com">funastyleconcepts@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container"></div>
+      </div>
+      <div class="footer__bar">
+        <p>Copyright © 2024 Funa Style Concepts. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Add scroll animation to images
+    window.addEventListener('scroll', () => {
+      const images = document.querySelectorAll('.display__col img');
+
+      images.forEach(image => {
+        const imageTop = image.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (imageTop < screenHeight) {
+          image.classList.add('slide-up');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
